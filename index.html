@@ -1,0 +1,1080 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Luxfinity Marketing | Luxury Digital Marketing Agency</title>
+
+  <!-- TAILWIND CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- GOOGLE FONTS -->
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- TAILWIND CUSTOM THEME -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+fontFamily: {
+  seriflux: ['Cinzel', 'Georgia', 'serif'],
+  sanslux: ['Inter', 'Arial', 'sans-serif'],
+},
+          colors: {
+            luxBlack: '#070707',
+            luxDark: '#101010',
+            luxGold: '#FFD700',
+            luxSilver: '#D8D8D8',
+            luxMuted: '#A8A8A8',
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    h1, h2, h3, h4,
+.font-seriflux {
+  font-family: "Cinzel", Georgia, serif;
+  text-transform: uppercase;
+  letter-spacing: -0.03em;
+}
+
+p, a, span, li, button,
+.font-sanslux {
+  font-family: "Inter", Arial, sans-serif;
+}
+
+.section-kicker,
+.gold-text.text-\[11px\],
+.gold-text.text-\[12px\] {
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+    /* =========================
+       SMALL CUSTOM CSS ONLY
+    ========================= */
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+body {
+  font-family: "Inter", sans-serif;
+      background: #070707;
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    /* Shiny gold text */
+    .gold-text {
+      background: linear-gradient(135deg, #fff7c2 0%, #ffd700 35%, #b8860b 70%, #fff2a8 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* Shiny gold background */
+    .gold-bg {
+      background: linear-gradient(135deg, #fff7c2 0%, #ffd700 35%, #b8860b 75%, #fff2a8 100%);
+    }
+
+    /* Custom AOS animation */
+    [data-aos] {
+      opacity: 0;
+      transform: translateY(45px);
+      transition: all 0.9s ease;
+    }
+
+    [data-aos="fade-left"] {
+      transform: translateX(60px);
+    }
+
+    [data-aos="fade-right"] {
+      transform: translateX(-60px);
+    }
+
+    [data-aos="zoom-in"] {
+      transform: scale(0.92);
+    }
+
+    [data-aos].show {
+      opacity: 1;
+      transform: translate(0) scale(1);
+    }
+
+    /* Marquee */
+    .marquee-track {
+      animation: marquee 24s linear infinite;
+      width: max-content;
+    }
+
+    @keyframes marquee {
+      from {
+        transform: translateX(0);
+      }
+      to {
+        transform: translateX(-50%);
+      }
+    }
+/* =========================
+   PROCESS CIRCLE GLOW
+========================= */
+.process-circle {
+  transition: 0.7s ease;
+}
+
+.process-circle.process-active {
+  border-color: rgba(255, 215, 0, 0.75);
+  box-shadow:
+    0 0 35px rgba(255, 215, 0, 0.28),
+    inset 0 0 25px rgba(255, 215, 0, 0.08);
+  transform: translateY(-8px) scale(1.03);
+}
+/* =========================
+   SERVICE FLIP CARDS
+========================= */
+.service-flip {
+  perspective: 1200px;
+}
+
+.service-flip-inner {
+  transform-style: preserve-3d;
+  transition: transform 0.8s cubic-bezier(.2,.8,.2,1);
+}
+
+/* Desktop hover flip */
+@media (hover: hover) {
+  .service-flip:hover .service-flip-inner {
+    transform: rotateY(180deg);
+  }
+}
+
+/* Mobile tap flip */
+.service-flip.active .service-flip-inner {
+  transform: rotateY(180deg);
+}
+
+.service-front,
+.service-back {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.service-back {
+  transform: rotateY(180deg);
+}
+  </style>
+</head>
+
+<body>
+
+  <!-- =========================
+       HEADER
+  ========================= -->
+  <header class="fixed top-4 left-1/2 -translate-x-1/2 w-[calc(100%-24px)] max-w-6xl h-[64px] z-50 rounded-full border border-yellow-400/20 bg-black/70 backdrop-blur-2xl shadow-2xl px-4 md:px-6 flex items-center justify-between">
+
+    <!-- LOGO IMAGE -->
+    <a href="index.html" class="flex items-center">
+      <img src="assets/images/logo.png" alt="Luxfinity Logo" class="h-18 md:h-20 w-auto object-contain">
+    </a>
+
+    <!-- DESKTOP NAV -->
+    <nav class="hidden lg:flex items-center gap-1 bg-white/5 border border-white/10 rounded-full p-1">
+      <a href="index.html" class="px-4 py-2 rounded-full text-[10px] font-bold uppercase tracking-[1.5px] text-white/70 hover:text-black hover:bg-yellow-400 transition">Home</a>
+      <a href="about.html" class="px-4 py-2 rounded-full text-[10px] font-bold uppercase tracking-[1.5px] text-white/70 hover:text-black hover:bg-yellow-400 transition">About</a>
+      <a href="services.html" class="px-4 py-2 rounded-full text-[10px] font-bold uppercase tracking-[1.5px] text-white/70 hover:text-black hover:bg-yellow-400 transition">Services</a>
+      <a href="portfolio.html" class="px-4 py-2 rounded-full text-[10px] font-bold uppercase tracking-[1.5px] text-white/70 hover:text-black hover:bg-yellow-400 transition">Work</a>
+      <a href="process.html" class="px-4 py-2 rounded-full text-[10px] font-bold uppercase tracking-[1.5px] text-white/70 hover:text-black hover:bg-yellow-400 transition">Process</a>
+    </nav>
+
+    <!-- DESKTOP CTA -->
+    <a href="contact.html" class="hidden md:inline-flex gold-bg text-black px-5 py-3 rounded-full text-[10px] font-extrabold uppercase tracking-[1.5px] shadow-[0_0_25px_rgba(255,215,0,0.25)] hover:-translate-y-1 transition">
+      Start Project
+    </a>
+
+    <!-- MOBILE MENU BUTTON -->
+    <button id="menuBtn" class="lg:hidden w-11 h-11 rounded-full border border-yellow-400/25 bg-white/5 flex flex-col items-center justify-center gap-1.5">
+      <span class="w-5 h-[2px] gold-bg rounded-full"></span>
+      <span class="w-5 h-[2px] gold-bg rounded-full"></span>
+      <span class="w-5 h-[2px] gold-bg rounded-full"></span>
+    </button>
+  </header>
+
+  <!-- MOBILE MENU -->
+  <div id="mobileMenu" class="hidden fixed top-[88px] left-3 right-3 z-40 rounded-3xl border border-yellow-400/20 bg-black/95 backdrop-blur-2xl p-4 shadow-2xl lg:hidden">
+    <div class="grid gap-2">
+      <a href="index.html" class="mobile-link px-5 py-4 rounded-2xl bg-white/5 border border-white/10 text-white/80 font-bold uppercase tracking-[1.5px]">Home</a>
+      <a href="about.html" class="mobile-link px-5 py-4 rounded-2xl bg-white/5 border border-white/10 text-white/80 font-bold uppercase tracking-[1.5px]">About</a>
+      <a href="services.html" class="mobile-link px-5 py-4 rounded-2xl bg-white/5 border border-white/10 text-white/80 font-bold uppercase tracking-[1.5px]">Services</a>
+      <a href="portfolio.html" class="mobile-link px-5 py-4 rounded-2xl bg-white/5 border border-white/10 text-white/80 font-bold uppercase tracking-[1.5px]">Work</a>
+      <a href="process.html" class="mobile-link px-5 py-4 rounded-2xl bg-white/5 border border-white/10 text-white/80 font-bold uppercase tracking-[1.5px]">Process</a>
+      <a href="contact.html" class="mobile-link gold-bg text-black px-5 py-4 rounded-2xl font-extrabold uppercase tracking-[1.5px] text-center">Contact</a>
+    </div>
+  </div>
+
+<!-- =========================
+   HERO SECTION - FULL BG MODEL
+========================= -->
+<section class="relative min-h-screen pt-32 md:pt-40 pb-16 px-5 lg:px-12 overflow-hidden bg-[#050505]">
+
+<!-- RIGHT SIDE BACKGROUND IMAGE -->
+<div class="absolute inset-0 bg-[#050505]">
+  <img
+    src="assets/images/hero new.png"
+    alt="Luxfinity luxury model background"
+    class="absolute right-0 bottom-0 h-full w-full object-contain object-right-bottom opacity-80"
+  >
+</div>
+
+  <!-- GOLD / SILVER BACKGROUND GLOWS -->
+  <div class="absolute top-24 left-0 w-[360px] h-[360px] bg-yellow-400/20 blur-[120px] rounded-full"></div>
+  <div class="absolute bottom-10 right-0 w-[420px] h-[420px] bg-white/10 blur-[130px] rounded-full"></div>
+  <div class="absolute inset-0 bg-[linear-gradient(120deg,rgba(255,215,0,0.08),transparent_35%,rgba(255,255,255,0.05))]"></div>
+
+  <div class="relative max-w-7xl mx-auto min-h-[calc(100vh-180px)] flex items-center">
+
+    <!-- HERO LEFT CONTENT -->
+    <div class="max-w-3xl" data-aos="fade-right">
+
+      <div class="inline-flex items-center gap-3 mb-6 px-4 py-2 rounded-full border border-yellow-400/25 bg-black/40 backdrop-blur-xl">
+        <span class="w-2 h-2 rounded-full gold-bg shadow-[0_0_18px_rgba(255,215,0,0.9)]"></span>
+        <p class="gold-text text-[9px] md:text-[10px] font-extrabold uppercase tracking-[3px]">
+          Luxury Creative & Digital Agency
+        </p>
+      </div>
+
+      <h1 class="font-seriflux text-[32px] sm:text-[39px] md:text-[51px] xl:text-[56px] leading-[0.92] font-bold mb-6 max-w-3xl">
+        Elevating <span class="gold-text">Luxury</span><br>
+        Brands With <span class="gold-text">Digital</span><br>
+        Excellence.
+      </h1>
+
+      <p class="text-luxMuted text-[13px] md:text-[15px] leading-7 max-w-2xl mb-8">
+        We create premium brand experiences through
+        <span class="gold-text font-bold">strategy</span>, websites, AI systems,
+        performance marketing and elegant digital storytelling.
+      </p>
+
+      <div class="flex flex-wrap gap-4 mb-10">
+        <a href="contact.html" class="gold-bg text-black px-6 md:px-7 py-4 rounded-full text-[10px] font-extrabold uppercase tracking-[2px] shadow-[0_0_30px_rgba(255,215,0,0.32)] hover:-translate-y-1 transition">
+          Start Your Project
+        </a>
+
+        <a href="portfolio.html" class="border border-white/15 bg-white/[0.03] text-white px-6 md:px-7 py-4 rounded-full text-[10px] font-extrabold uppercase tracking-[2px] hover:border-yellow-400 hover:text-yellow-400 transition">
+          View Our Work
+        </a>
+      </div>
+
+      <div class="grid grid-cols-3 gap-3 max-w-xl">
+        <div class="rounded-2xl border border-white/10 bg-black/45 backdrop-blur-xl p-4">
+          <h3 class="gold-text font-seriflux text-2xl font-bold">AI</h3>
+          <p class="text-white/55 text-[10px] uppercase tracking-[1.5px] mt-1">Powered</p>
+        </div>
+
+        <div class="rounded-2xl border border-white/10 bg-black/45 backdrop-blur-xl p-4">
+          <h3 class="gold-text font-seriflux text-2xl font-bold">360°</h3>
+          <p class="text-white/55 text-[10px] uppercase tracking-[1.5px] mt-1">Marketing</p>
+        </div>
+
+        <div class="rounded-2xl border border-white/10 bg-black/45 backdrop-blur-xl p-4">
+          <h3 class="gold-text font-seriflux text-2xl font-bold">Luxury</h3>
+          <p class="text-white/55 text-[10px] uppercase tracking-[1.5px] mt-1">Branding</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+  <!-- =========================
+       MARQUEE
+  ========================= -->
+  <section class="overflow-hidden border-y border-white/10 bg-[#0d0d0d] py-6">
+    <div class="marquee-track flex gap-12">
+      <div class="flex gap-12 items-center">
+        <span class="font-seriflux text-2xl text-luxSilver whitespace-nowrap">Brand Strategy</span>
+        <span class="gold-text text-2xl">•</span>
+        <span class="font-seriflux text-2xl text-luxSilver whitespace-nowrap">AI Marketing</span>
+        <span class="gold-text text-2xl">•</span>
+        <span class="font-seriflux text-2xl text-luxSilver whitespace-nowrap">Luxury Websites</span>
+        <span class="gold-text text-2xl">•</span>
+        <span class="font-seriflux text-2xl text-luxSilver whitespace-nowrap">Performance Ads</span>
+        <span class="gold-text text-2xl">•</span>
+        <span class="font-seriflux text-2xl text-luxSilver whitespace-nowrap">Social Media Growth</span>
+        <span class="gold-text text-2xl">•</span>
+      </div>
+
+      <div class="flex gap-12 items-center">
+        <span class="font-seriflux text-2xl text-luxSilver whitespace-nowrap">Brand Strategy</span>
+        <span class="gold-text text-2xl">•</span>
+        <span class="font-seriflux text-2xl text-luxSilver whitespace-nowrap">AI Marketing</span>
+        <span class="gold-text text-2xl">•</span>
+        <span class="font-seriflux text-2xl text-luxSilver whitespace-nowrap">Luxury Websites</span>
+        <span class="gold-text text-2xl">•</span>
+        <span class="font-seriflux text-2xl text-luxSilver whitespace-nowrap">Performance Ads</span>
+        <span class="gold-text text-2xl">•</span>
+        <span class="font-seriflux text-2xl text-luxSilver whitespace-nowrap">Social Media Growth</span>
+        <span class="gold-text text-2xl">•</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================
+     ABOUT SECTION - STICKY IMAGE + SCROLL CONTENT
+========================= -->
+<section class="relative py-20 md:py-28 px-5 lg:px-12 bg-[#070707]">
+
+  <!-- BACKGROUND GLOWS -->
+  <div class="absolute top-10 right-0 w-[420px] h-[420px] bg-yellow-400/10 blur-[130px] rounded-full"></div>
+  <div class="absolute bottom-0 left-0 w-[360px] h-[360px] bg-white/5 blur-[120px] rounded-full"></div>
+
+  <div class="relative max-w-7xl mx-auto grid lg:grid-cols-[0.95fr_1.05fr] gap-12 lg:gap-20 items-start">
+
+    <!-- LEFT STICKY IMAGE -->
+    <div class="lg:sticky lg:top-24 self-start">
+
+      <div class="relative">
+        <div class="absolute -inset-4 rounded-[38px] bg-gradient-to-br from-yellow-400/20 via-white/5 to-transparent blur-2xl"></div>
+
+        <div class="relative rounded-[34px] overflow-hidden border border-yellow-400/20 bg-white/[0.04] shadow-[0_35px_100px_rgba(0,0,0,0.55)]">
+          <img
+            src="assets/images/who.png"
+            alt="Luxfinity creative marketing agency"
+            class="h-[380px] md:h-[500px] lg:h-[560px] object-cover opacity-90"
+          >
+
+          <div class="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent"></div>
+
+          <div class="absolute left-5 right-5 bottom-5 rounded-3xl border border-white/10 bg-black/70 backdrop-blur-xl p-5">
+            <p class="text-white/45 text-[9px] font-bold uppercase tracking-[2px] mb-2">
+              About Luxfinity
+            </p>
+
+            <h3 class="font-seriflux text-2xl md:text-3xl font-bold leading-none">
+              Creative <span class="gold-text">Growth</span><br>
+              Meets Luxury.
+            </h3>
+          </div>
+        </div>
+
+        <div class="hidden md:block absolute -right-7 top-12 rounded-3xl border border-yellow-400/25 bg-black/75 backdrop-blur-xl px-6 py-5 shadow-[0_20px_60px_rgba(0,0,0,0.5)]">
+          <p class="gold-text font-seriflux text-3xl font-bold">360°</p>
+          <p class="text-white/55 text-[10px] uppercase tracking-[2px] mt-1">Digital Growth</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- RIGHT SCROLLING CONTENT -->
+    <div class="space-y-3" data-aos="fade-left">
+
+      <!-- TOP INTRO -->
+      <div class="min-h-[70vh] flex flex-col justify-center">
+        <div class="inline-flex items-center gap-3 mb-5 px-4 py-2 rounded-full border border-yellow-400/25 bg-white/[0.04] w-fit">
+          <span class="w-2 h-2 rounded-full gold-bg shadow-[0_0_18px_rgba(255,215,0,0.8)]"></span>
+          <p class="gold-text text-[9px] font-extrabold uppercase tracking-[3px]">
+            Who We Are
+          </p>
+        </div>
+
+        <h2 class="font-seriflux text-[34px] sm:text-[43px] md:text-[56px] leading-[0.95] font-bold mb-6 max-w-3xl">
+          Designed for <span class="gold-text">Premium</span><br>
+          Brands That Want More.
+        </h2>
+
+        <p class="text-luxMuted text-[13px] md:text-[15px] leading-7 max-w-3xl">
+          Luxfinity Marketing is a creative and digital growth agency helping brands
+          build strong market presence with <span class="gold-text font-bold">luxury storytelling</span>,
+          high-converting design, AI-powered systems and performance marketing.
+        </p>
+      </div>
+
+      <!-- CARD 01 -->
+      <div class="min-h-[32vh] flex items-center">
+        <div class="relative overflow-hidden rounded-3xl border border-white/10 bg-white/[0.035] p-7 hover:border-yellow-400/50 transition duration-300 w-full">
+          <div class="absolute -right-10 -top-10 w-32 h-32 bg-yellow-400/10 blur-2xl rounded-full"></div>
+          <div class="relative">
+            <div class="w-12 h-12 rounded-2xl gold-bg text-black flex items-center justify-center font-extrabold mb-5">
+              01
+            </div>
+            <h3 class="font-seriflux text-2xl md:text-3xl font-bold mb-3">
+              Premium <span class="gold-text">Identity</span>
+            </h3>
+            <p class="text-luxMuted leading-7">
+              Premium brand identity and creative strategy for brands that want a strong luxury presence.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 02 -->
+      <div class="min-h-[32vh] flex items-center">
+        <div class="relative overflow-hidden rounded-3xl border border-white/10 bg-white/[0.035] p-7 hover:border-yellow-400/50 transition duration-300 w-full">
+          <div class="absolute -right-10 -top-10 w-32 h-32 bg-yellow-400/10 blur-2xl rounded-full"></div>
+          <div class="relative">
+            <div class="w-12 h-12 rounded-2xl gold-bg text-black flex items-center justify-center font-extrabold mb-5">
+              02
+            </div>
+            <h3 class="font-seriflux text-2xl md:text-3xl font-bold mb-3">
+              Website <span class="gold-text">Experience</span>
+            </h3>
+            <p class="text-luxMuted leading-7">
+              Modern website design and development focused on premium visuals and better conversions.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 03 -->
+      <div class="min-h-[32vh] flex items-center">
+        <div class="relative overflow-hidden rounded-3xl border border-white/10 bg-white/[0.035] p-7 hover:border-yellow-400/50 transition duration-300 w-full">
+          <div class="absolute -right-10 -top-10 w-32 h-32 bg-yellow-400/10 blur-2xl rounded-full"></div>
+          <div class="relative">
+            <div class="w-12 h-12 rounded-2xl gold-bg text-black flex items-center justify-center font-extrabold mb-5">
+              03
+            </div>
+            <h3 class="font-seriflux text-2xl md:text-3xl font-bold mb-3">
+              AI <span class="gold-text">Automation</span>
+            </h3>
+            <p class="text-luxMuted leading-7">
+              AI automation and digital marketing systems that simplify operations and improve growth.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 04 -->
+      <div class="min-h-[32vh] flex items-center">
+        <div class="relative overflow-hidden rounded-3xl border border-white/10 bg-white/[0.035] p-7 hover:border-yellow-400/50 transition duration-300 w-full">
+          <div class="absolute -right-10 -top-10 w-32 h-32 bg-yellow-400/10 blur-2xl rounded-full"></div>
+          <div class="relative">
+            <div class="w-12 h-12 rounded-2xl gold-bg text-black flex items-center justify-center font-extrabold mb-5">
+              04
+            </div>
+            <h3 class="font-seriflux text-2xl md:text-3xl font-bold mb-3">
+              Performance <span class="gold-text">Growth</span>
+            </h3>
+            <p class="text-luxMuted leading-7">
+              Performance campaigns focused on measurable growth, stronger visibility and real results.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- FINAL CTA -->
+      <div class="min-h-[35vh] flex flex-col justify-center border-t border-white/10 pt-10">
+        <h3 class="font-seriflux text-3xl md:text-4xl font-bold mb-5">
+          Strategy • Design • AI • <span class="gold-text">Marketing</span>
+        </h3>
+
+        <p class="text-luxMuted leading-7 mb-7 max-w-2xl">
+          Every part of your brand presence is crafted to feel premium, perform better and grow with clarity.
+        </p>
+
+        <a href="about.html" class="gold-bg text-black px-6 py-4 rounded-full text-[10px] font-extrabold uppercase tracking-[2px] shadow-[0_0_28px_rgba(255,215,0,0.25)] hover:-translate-y-1 transition w-fit">
+          Explore About Us
+        </a>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- =========================
+     SERVICES SECTION - PREMIUM FLIP CARDS
+========================= -->
+<section class="relative py-24 md:py-32 px-6 lg:px-12 bg-gradient-to-b from-[#070707] to-[#101010] overflow-hidden">
+
+  <!-- BACKGROUND GLOWS -->
+  <div class="absolute top-20 left-0 w-[360px] h-[360px] bg-yellow-400/10 blur-[120px] rounded-full"></div>
+  <div class="absolute bottom-20 right-0 w-[420px] h-[420px] bg-white/5 blur-[130px] rounded-full"></div>
+
+  <div class="relative max-w-7xl mx-auto">
+
+    <!-- SECTION HEADING -->
+    <div data-aos="fade-up" class="max-w-4xl">
+      <div class="inline-flex items-center gap-3 mb-5 px-4 py-2 rounded-full border border-yellow-400/25 bg-white/[0.04]">
+        <span class="w-2 h-2 rounded-full gold-bg shadow-[0_0_18px_rgba(255,215,0,0.8)]"></span>
+        <p class="gold-text text-[9px] font-extrabold uppercase tracking-[3px]">
+          What We Do
+        </p>
+      </div>
+
+      <h2 class="font-seriflux text-[36px] md:text-[58px] leading-[0.95] font-bold mb-6">
+        Our <span class="gold-text">Luxury</span> Services
+      </h2>
+
+      <p class="text-luxMuted text-sm md:text-base leading-7 max-w-3xl">
+        From brand strategy to digital execution, Luxfinity creates complete growth ecosystems
+        for brands that want to look premium, perform better and scale stronger.
+      </p>
+    </div>
+
+    <!-- SERVICE FLIP GRID -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-14">
+
+      <!-- CARD 01 -->
+      <div class="service-flip h-[300px] cursor-pointer" data-aos="zoom-in">
+        <div class="service-flip-inner relative w-full h-full">
+
+          <!-- FRONT -->
+          <div class="service-front absolute inset-0 rounded-[30px] border border-white/10 bg-white/[0.035] p-8 overflow-hidden">
+            <div class="absolute -right-16 -top-16 w-40 h-40 bg-yellow-400/10 blur-2xl rounded-full"></div>
+
+            <p class="absolute top-6 left-7 gold-text text-xs font-extrabold tracking-[2px]">01</p>
+
+            <div class="relative h-full flex flex-col items-center justify-center text-center">
+              <svg class="w-16 h-16 mb-6 text-yellow-400 drop-shadow-[0_0_18px_rgba(255,215,0,0.45)]" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24">
+                <path d="M12 3l8 4.5v9L12 21l-8-4.5v-9L12 3z"/>
+                <path d="M12 8v8M8 10l4-2 4 2M8 14l4 2 4-2"/>
+              </svg>
+
+              <h3 class="font-seriflux text-3xl font-bold">Brand Strategy</h3>
+            </div>
+          </div>
+
+          <!-- BACK -->
+          <div class="service-back absolute inset-0 rounded-[30px] border border-yellow-400/30 bg-[#0b0b0b] p-8 flex flex-col justify-center overflow-hidden">
+            <div class="absolute -left-16 -bottom-16 w-44 h-44 bg-yellow-400/10 blur-2xl rounded-full"></div>
+
+            <h3 class="relative font-seriflux text-3xl font-bold mb-4">
+              Brand <span class="gold-text">Strategy</span>
+            </h3>
+
+            <p class="relative text-luxMuted leading-6">
+              We shape brand positioning, messaging, identity direction and luxury storytelling that makes your brand feel premium and memorable.
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- CARD 02 -->
+      <div class="service-flip h-[300px] cursor-pointer" data-aos="zoom-in">
+        <div class="service-flip-inner relative w-full h-full">
+
+          <!-- FRONT -->
+          <div class="service-front absolute inset-0 rounded-[30px] border border-white/10 bg-white/[0.035] p-8 overflow-hidden">
+            <div class="absolute -right-16 -top-16 w-40 h-40 bg-yellow-400/10 blur-2xl rounded-full"></div>
+
+            <p class="absolute top-6 left-7 gold-text text-xs font-extrabold tracking-[2px]">02</p>
+
+            <div class="relative h-full flex flex-col items-center justify-center text-center">
+              <svg class="w-16 h-16 mb-6 text-yellow-400 drop-shadow-[0_0_18px_rgba(255,215,0,0.45)]" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24">
+                <rect x="3" y="4" width="18" height="13" rx="2"/>
+                <path d="M8 21h8M12 17v4M7 8h10M7 12h6"/>
+              </svg>
+
+              <h3 class="font-seriflux text-3xl font-bold">Website Design</h3>
+            </div>
+          </div>
+
+          <!-- BACK -->
+          <div class="service-back absolute inset-0 rounded-[30px] border border-yellow-400/30 bg-[#0b0b0b] p-8 flex flex-col justify-center overflow-hidden">
+            <div class="absolute -left-16 -bottom-16 w-44 h-44 bg-yellow-400/10 blur-2xl rounded-full"></div>
+
+            <h3 class="relative font-seriflux text-3xl font-bold mb-4">
+              Website <span class="gold-text">Design</span>
+            </h3>
+
+            <p class="relative text-luxMuted leading-6">
+              Premium, responsive and conversion-focused websites built with elegant visuals, smooth UX and strong brand storytelling.
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- CARD 03 -->
+      <div class="service-flip h-[300px] cursor-pointer" data-aos="zoom-in">
+        <div class="service-flip-inner relative w-full h-full">
+
+          <!-- FRONT -->
+          <div class="service-front absolute inset-0 rounded-[30px] border border-white/10 bg-white/[0.035] p-8 overflow-hidden">
+            <div class="absolute -right-16 -top-16 w-40 h-40 bg-yellow-400/10 blur-2xl rounded-full"></div>
+
+            <p class="absolute top-6 left-7 gold-text text-xs font-extrabold tracking-[2px]">03</p>
+
+            <div class="relative h-full flex flex-col items-center justify-center text-center">
+              <svg class="w-16 h-16 mb-6 text-yellow-400 drop-shadow-[0_0_18px_rgba(255,215,0,0.45)]" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24">
+                <path d="M4 19V5M4 19h16"/>
+                <path d="M8 16v-5M12 16V8M16 16v-9"/>
+                <path d="M7 10l5-4 4 2 4-5"/>
+              </svg>
+
+              <h3 class="font-seriflux text-3xl font-bold">Digital Marketing</h3>
+            </div>
+          </div>
+
+          <!-- BACK -->
+          <div class="service-back absolute inset-0 rounded-[30px] border border-yellow-400/30 bg-[#0b0b0b] p-8 flex flex-col justify-center overflow-hidden">
+            <div class="absolute -left-16 -bottom-16 w-44 h-44 bg-yellow-400/10 blur-2xl rounded-full"></div>
+
+            <h3 class="relative font-seriflux text-3xl font-bold mb-4">
+              Digital <span class="gold-text">Marketing</span>
+            </h3>
+
+            <p class="relative text-luxMuted leading-6">
+              SEO, paid ads, content strategy and campaign planning designed to increase visibility, engagement and business growth.
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- CARD 04 -->
+      <div class="service-flip h-[300px] cursor-pointer" data-aos="zoom-in">
+        <div class="service-flip-inner relative w-full h-full">
+
+          <!-- FRONT -->
+          <div class="service-front absolute inset-0 rounded-[30px] border border-white/10 bg-white/[0.035] p-8 overflow-hidden">
+            <div class="absolute -right-16 -top-16 w-40 h-40 bg-yellow-400/10 blur-2xl rounded-full"></div>
+
+            <p class="absolute top-6 left-7 gold-text text-xs font-extrabold tracking-[2px]">04</p>
+
+            <div class="relative h-full flex flex-col items-center justify-center text-center">
+              <svg class="w-16 h-16 mb-6 text-yellow-400 drop-shadow-[0_0_18px_rgba(255,215,0,0.45)]" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24">
+                <path d="M12 3v4M12 17v4M3 12h4M17 12h4"/>
+                <circle cx="12" cy="12" r="4"/>
+                <path d="M7 7l2 2M17 7l-2 2M7 17l2-2M17 17l-2-2"/>
+              </svg>
+
+              <h3 class="font-seriflux text-3xl font-bold">AI Solutions</h3>
+            </div>
+          </div>
+
+          <!-- BACK -->
+          <div class="service-back absolute inset-0 rounded-[30px] border border-yellow-400/30 bg-[#0b0b0b] p-8 flex flex-col justify-center overflow-hidden">
+            <div class="absolute -left-16 -bottom-16 w-44 h-44 bg-yellow-400/10 blur-2xl rounded-full"></div>
+
+            <h3 class="relative font-seriflux text-3xl font-bold mb-4">
+              AI <span class="gold-text">Solutions</span>
+            </h3>
+
+            <p class="relative text-luxMuted leading-6">
+              AI-powered marketing automation, smart workflows, chatbots and productivity systems that help brands work faster.
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- CARD 05 -->
+      <div class="service-flip h-[300px] cursor-pointer" data-aos="zoom-in">
+        <div class="service-flip-inner relative w-full h-full">
+
+          <!-- FRONT -->
+          <div class="service-front absolute inset-0 rounded-[30px] border border-white/10 bg-white/[0.035] p-8 overflow-hidden">
+            <div class="absolute -right-16 -top-16 w-40 h-40 bg-yellow-400/10 blur-2xl rounded-full"></div>
+
+            <p class="absolute top-6 left-7 gold-text text-xs font-extrabold tracking-[2px]">05</p>
+
+            <div class="relative h-full flex flex-col items-center justify-center text-center">
+              <svg class="w-16 h-16 mb-6 text-yellow-400 drop-shadow-[0_0_18px_rgba(255,215,0,0.45)]" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24">
+                <rect x="5" y="3" width="14" height="18" rx="3"/>
+                <path d="M9 7h6M9 11h6M9 15h3"/>
+                <circle cx="16" cy="16" r="2"/>
+              </svg>
+
+              <h3 class="font-seriflux text-3xl font-bold">Social Media</h3>
+            </div>
+          </div>
+
+          <!-- BACK -->
+          <div class="service-back absolute inset-0 rounded-[30px] border border-yellow-400/30 bg-[#0b0b0b] p-8 flex flex-col justify-center overflow-hidden">
+            <div class="absolute -left-16 -bottom-16 w-44 h-44 bg-yellow-400/10 blur-2xl rounded-full"></div>
+
+            <h3 class="relative font-seriflux text-3xl font-bold mb-4">
+              Social <span class="gold-text">Media</span>
+            </h3>
+
+            <p class="relative text-luxMuted leading-6">
+              Premium content planning, creative direction, reels, campaigns and page growth for brands that want stronger presence.
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- CARD 06 -->
+      <div class="service-flip h-[300px] cursor-pointer" data-aos="zoom-in">
+        <div class="service-flip-inner relative w-full h-full">
+
+          <!-- FRONT -->
+          <div class="service-front absolute inset-0 rounded-[30px] border border-white/10 bg-white/[0.035] p-8 overflow-hidden">
+            <div class="absolute -right-16 -top-16 w-40 h-40 bg-yellow-400/10 blur-2xl rounded-full"></div>
+
+            <p class="absolute top-6 left-7 gold-text text-xs font-extrabold tracking-[2px]">06</p>
+
+            <div class="relative h-full flex flex-col items-center justify-center text-center">
+              <svg class="w-16 h-16 mb-6 text-yellow-400 drop-shadow-[0_0_18px_rgba(255,215,0,0.45)]" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="8"/>
+                <circle cx="12" cy="12" r="4"/>
+                <path d="M12 2v4M12 18v4M2 12h4M18 12h4"/>
+              </svg>
+
+              <h3 class="font-seriflux text-3xl font-bold">Performance Ads</h3>
+            </div>
+          </div>
+
+          <!-- BACK -->
+          <div class="service-back absolute inset-0 rounded-[30px] border border-yellow-400/30 bg-[#0b0b0b] p-8 flex flex-col justify-center overflow-hidden">
+            <div class="absolute -left-16 -bottom-16 w-44 h-44 bg-yellow-400/10 blur-2xl rounded-full"></div>
+
+            <h3 class="relative font-seriflux text-3xl font-bold mb-4">
+              Performance <span class="gold-text">Ads</span>
+            </h3>
+
+            <p class="relative text-luxMuted leading-6">
+              Data-driven ad campaigns for leads, sales, awareness and measurable ROI across high-performance platforms.
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- =========================
+     INDUSTRIES SECTION
+========================= -->
+<section class="relative py-24 md:py-32 px-6 lg:px-12 bg-[#070707] overflow-hidden">
+
+  <!-- BACKGROUND GLOWS -->
+  <div class="absolute top-16 left-0 w-[420px] h-[420px] bg-yellow-400/10 blur-[130px] rounded-full"></div>
+  <div class="absolute bottom-10 right-0 w-[360px] h-[360px] bg-white/5 blur-[120px] rounded-full"></div>
+
+  <div class="relative max-w-7xl mx-auto">
+
+    <!-- SECTION HEADING -->
+    <div class="max-w-4xl mb-14" data-aos="fade-up">
+      <div class="inline-flex items-center gap-3 mb-5 px-4 py-2 rounded-full border border-yellow-400/25 bg-white/[0.04]">
+        <span class="w-2 h-2 rounded-full gold-bg shadow-[0_0_18px_rgba(255,215,0,0.8)]"></span>
+        <p class="gold-text text-[9px] font-extrabold uppercase tracking-[3px]">
+          Industries We Elevate
+        </p>
+      </div>
+
+<h2 class="font-seriflux text-[31px] sm:text-[39px] md:text-[48px] lg:text-[56px] leading-[0.92] font-bold mb-6 max-w-none">
+  Built for <span class="gold-text">Luxury</span><br>
+  & Premium Markets
+</h2>
+
+      <p class="text-luxMuted text-sm md:text-base leading-7 max-w-3xl">
+        Luxfinity helps premium businesses create powerful digital presence across
+        real estate, fashion, hospitality, beauty, technology and lifestyle industries.
+      </p>
+    </div>
+
+    <!-- INDUSTRY LAYOUT -->
+    <div class="grid lg:grid-cols-[1fr_1.25fr] gap-8 items-stretch">
+
+      <!-- LEFT FEATURE CARD -->
+      <div class="relative rounded-[34px] overflow-hidden border border-yellow-400/20 min-h-[520px]" data-aos="fade-right">
+        <img
+          src="assets/images/industry.png"
+          alt="Luxury industries"
+          class="absolute inset-0 w-full h-full object-cover"
+        >
+
+        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/55 to-black/10"></div>
+
+        <div class="absolute left-6 right-6 bottom-6">
+          <p class="gold-text text-[10px] font-extrabold uppercase tracking-[2.5px] mb-3">
+            Premium Positioning
+          </p>
+
+          <h3 class="font-seriflux text-3xl md:text-4xl font-bold leading-none mb-4">
+            Every Industry Needs a Different Luxury Language.
+          </h3>
+
+          <p class="text-luxMuted leading-6">
+            We design brand experiences based on audience psychology, market positioning
+            and conversion-driven storytelling.
+          </p>
+        </div>
+      </div>
+
+      <!-- RIGHT INDUSTRY CARDS -->
+      <div class="grid sm:grid-cols-2 gap-5" data-aos="fade-left">
+
+        <div class="group rounded-[28px] border border-white/10 bg-white/[0.035] p-6 hover:border-yellow-400/50 hover:-translate-y-1 transition">
+          <p class="gold-text font-seriflux text-3xl font-bold mb-4">01</p>
+          <h3 class="font-seriflux text-2xl font-bold mb-3">Real Estate</h3>
+          <p class="text-luxMuted text-xs leading-6">
+            Premium websites, launch campaigns, lead funnels and luxury project positioning.
+          </p>
+        </div>
+
+        <div class="group rounded-[28px] border border-white/10 bg-white/[0.035] p-6 hover:border-yellow-400/50 hover:-translate-y-1 transition">
+          <p class="gold-text font-seriflux text-3xl font-bold mb-4">02</p>
+          <h3 class="font-seriflux text-2xl font-bold mb-3">Fashion & Lifestyle</h3>
+          <p class="text-luxMuted text-xs leading-6">
+            Visual storytelling, brand identity, social media campaigns and product marketing.
+          </p>
+        </div>
+
+        <div class="group rounded-[28px] border border-white/10 bg-white/[0.035] p-6 hover:border-yellow-400/50 hover:-translate-y-1 transition">
+          <p class="gold-text font-seriflux text-3xl font-bold mb-4">03</p>
+          <h3 class="font-seriflux text-2xl font-bold mb-3">Hospitality</h3>
+          <p class="text-luxMuted text-xs leading-6">
+            Hotel, resort and restaurant branding with premium digital booking experiences.
+          </p>
+        </div>
+
+        <div class="group rounded-[28px] border border-white/10 bg-white/[0.035] p-6 hover:border-yellow-400/50 hover:-translate-y-1 transition">
+          <p class="gold-text font-seriflux text-3xl font-bold mb-4">04</p>
+          <h3 class="font-seriflux text-2xl font-bold mb-3">Beauty & Wellness</h3>
+          <p class="text-luxMuted text-xs leading-6">
+            Luxury beauty marketing, content planning, appointment funnels and brand trust.
+          </p>
+        </div>
+
+        <div class="group rounded-[28px] border border-white/10 bg-white/[0.035] p-6 hover:border-yellow-400/50 hover:-translate-y-1 transition">
+          <p class="gold-text font-seriflux text-3xl font-bold mb-4">05</p>
+          <h3 class="font-seriflux text-2xl font-bold mb-3">Technology</h3>
+          <p class="text-luxMuted text-xs leading-6">
+            AI-first websites, SaaS positioning, automation systems and digital growth campaigns.
+          </p>
+        </div>
+
+        <div class="group rounded-[28px] border border-white/10 bg-white/[0.035] p-6 hover:border-yellow-400/50 hover:-translate-y-1 transition">
+          <p class="gold-text font-seriflux text-3xl font-bold mb-4">06</p>
+          <h3 class="font-seriflux text-2xl font-bold mb-3">Luxury Retail</h3>
+          <p class="text-luxMuted text-xs leading-6">
+            Product storytelling, e-commerce presentation, paid ads and premium customer journeys.
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+ <!-- =========================
+     PROCESS SECTION - SIMPLE CIRCLES
+========================= -->
+<section id="processCircles" class="relative py-24 md:py-32 px-6 lg:px-12 bg-[#0d0d0d] overflow-hidden">
+
+  <!-- BACKGROUND GLOW -->
+  <div class="absolute top-20 left-1/2 -translate-x-1/2 w-[520px] h-[520px] bg-yellow-400/10 blur-[150px] rounded-full"></div>
+
+  <div class="relative max-w-7xl mx-auto">
+
+    <!-- SECTION HEADING -->
+    <div class="text-center max-w-3xl mx-auto" data-aos="fade-up">
+      <p class="gold-text text-[9px] font-extrabold uppercase tracking-[3px] mb-4">
+        Our Process
+      </p>
+
+      <h2 class="font-seriflux text-[36px] md:text-[58px] leading-[0.95] font-bold mb-6">
+        Our <span class="gold-text">Process</span>
+      </h2>
+
+      <p class="text-luxMuted text-sm md:text-base leading-7">
+        Every project follows a clear luxury-first process — from discovery to launch and growth.
+      </p>
+    </div>
+
+    <!-- TOP 3 CIRCLES -->
+    <div class="grid md:grid-cols-3 gap-6 mt-16">
+
+      <!-- 01 -->
+      <div class="process-circle min-h-[300px] rounded-full border border-white/10 bg-black/60 backdrop-blur-xl p-8 flex flex-col items-center justify-center text-center">
+        <span class="gold-text font-seriflux text-5xl font-bold mb-3">01</span>
+        <h3 class="text-xl font-bold mb-3">Discover</h3>
+        <p class="text-luxMuted text-xs leading-6 max-w-[220px]">
+          We understand your brand, audience, goals, market and positioning.
+        </p>
+      </div>
+
+      <!-- 02 -->
+      <div class="process-circle min-h-[300px] rounded-full border border-white/10 bg-black/60 backdrop-blur-xl p-8 flex flex-col items-center justify-center text-center">
+        <span class="gold-text font-seriflux text-5xl font-bold mb-3">02</span>
+        <h3 class="text-xl font-bold mb-3">Strategize</h3>
+        <p class="text-luxMuted text-xs leading-6 max-w-[220px]">
+          We create a complete roadmap for design, content, marketing and execution.
+        </p>
+      </div>
+
+      <!-- 03 -->
+      <div class="process-circle min-h-[300px] rounded-full border border-white/10 bg-black/60 backdrop-blur-xl p-8 flex flex-col items-center justify-center text-center">
+        <span class="gold-text font-seriflux text-5xl font-bold mb-3">03</span>
+        <h3 class="text-xl font-bold mb-3">Create</h3>
+        <p class="text-luxMuted text-xs leading-6 max-w-[220px]">
+          We design premium visuals, websites, campaigns and brand assets.
+        </p>
+      </div>
+
+    </div>
+
+    <!-- BOTTOM 2 CIRCLES -->
+    <div class="grid md:grid-cols-2 gap-6 mt-6 max-w-4xl mx-auto">
+
+      <!-- 04 -->
+      <div class="process-circle min-h-[300px] rounded-full border border-white/10 bg-black/60 backdrop-blur-xl p-8 flex flex-col items-center justify-center text-center">
+        <span class="gold-text font-seriflux text-5xl font-bold mb-3">04</span>
+        <h3 class="text-xl font-bold mb-3">Launch</h3>
+        <p class="text-luxMuted text-xs leading-6 max-w-[220px]">
+          We launch your brand presence with performance tracking and clarity.
+        </p>
+      </div>
+
+      <!-- 05 -->
+      <div class="process-circle min-h-[300px] rounded-full border border-white/10 bg-black/60 backdrop-blur-xl p-8 flex flex-col items-center justify-center text-center">
+        <span class="gold-text font-seriflux text-5xl font-bold mb-3">05</span>
+        <h3 class="text-xl font-bold mb-3">Scale</h3>
+        <p class="text-luxMuted text-xs leading-6 max-w-[220px]">
+          We optimize campaigns, improve performance and scale growth.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+  <!-- =========================
+       CTA SECTION
+  ========================= -->
+  <section class="py-24 md:py-32 px-6 lg:px-12 text-center bg-[radial-gradient(circle_at_center,rgba(255,215,0,0.2),transparent_40%),#070707]">
+    <div class="max-w-5xl mx-auto" data-aos="zoom-in">
+      <h2 class="font-seriflux text-[39px] md:text-[70px] leading-[0.95] font-bold mb-7">
+        Ready to Build Your<br>
+        <span class="gold-text">Luxury Brand?</span>
+      </h2>
+
+      <p class="text-luxMuted text-sm md:text-base leading-7 max-w-2xl mx-auto mb-9">
+        Let Luxfinity create a premium digital presence that looks powerful,
+        feels elite and performs with intelligence.
+      </p>
+
+      <a href="contact.html" class="inline-flex gold-bg text-black px-8 py-4 rounded-full text-[10px] font-extrabold uppercase tracking-[2px] shadow-[0_0_30px_rgba(255,215,0,0.3)] hover:-translate-y-1 transition">
+        Book A Consultation
+      </a>
+    </div>
+  </section>
+
+  <!-- =========================
+       FOOTER
+  ========================= -->
+  <footer class="pt-20 pb-8 px-6 lg:px-12 bg-[#030303] border-t border-white/10">
+    <div class="max-w-7xl mx-auto">
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1fr] gap-10 mb-12">
+
+        <div>
+          <img src="assets/images/logo.png" alt="Luxfinity Logo" class="h-18 w-auto mb-5">
+          <p class="text-luxMuted leading-7">
+            A luxury creative and digital marketing agency for brands that want
+            premium identity, strong visibility and intelligent growth.
+          </p>
+        </div>
+
+        <div>
+          <h3 class="font-seriflux text-2xl font-bold mb-5">Pages</h3>
+          <div class="grid gap-3 text-luxMuted">
+            <a href="index.html" class="hover:text-yellow-400">Home</a>
+            <a href="about.html" class="hover:text-yellow-400">About</a>
+            <a href="services.html" class="hover:text-yellow-400">Services</a>
+            <a href="portfolio.html" class="hover:text-yellow-400">Portfolio</a>
+            <a href="contact.html" class="hover:text-yellow-400">Contact</a>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="font-seriflux text-2xl font-bold mb-5">Services</h3>
+          <div class="grid gap-3 text-luxMuted">
+            <a href="services.html" class="hover:text-yellow-400">Brand Strategy</a>
+            <a href="services.html" class="hover:text-yellow-400">Website Design</a>
+            <a href="services.html" class="hover:text-yellow-400">Digital Marketing</a>
+            <a href="services.html" class="hover:text-yellow-400">AI Solutions</a>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="font-seriflux text-2xl font-bold mb-5">Contact</h3>
+          <div class="grid gap-3 text-luxMuted">
+            <p>Email: hello@luxfinitymarketing.com</p>
+            <p>Phone: +91 00000 00000</p>
+            <p>India</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="border-t border-white/10 pt-7 text-center text-luxMuted text-xs">
+        © 2026 Luxfinity Marketing. All Rights Reserved.
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- =========================
+       SMALL JAVASCRIPT
+  ========================= -->
+  <script>
+    /* Mobile Menu */
+    const menuBtn = document.getElementById("menuBtn");
+    const mobileMenu = document.getElementById("mobileMenu");
+    const mobileLinks = document.querySelectorAll(".mobile-link");
+
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+
+    mobileLinks.forEach((link) => {
+      link.addEventListener("click", () => {
+        mobileMenu.classList.add("hidden");
+      });
+    });
+
+    /* Custom AOS */
+    const aosElements = document.querySelectorAll("[data-aos]");
+
+    function runAOS() {
+      aosElements.forEach((element) => {
+        const elementTop = element.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+
+        if (elementTop < windowHeight - 100) {
+          element.classList.add("show");
+        }
+      });
+    }
+
+    window.addEventListener("load", runAOS);
+    window.addEventListener("scroll", runAOS);
+    /* Process Circles Glow One By One */
+const processCircleSection = document.getElementById("processCircles");
+const processCircleItems = document.querySelectorAll(".process-circle");
+
+let processCircleStarted = false;
+
+function startProcessCircleGlow() {
+  if (!processCircleSection || processCircleStarted) return;
+
+  const sectionTop = processCircleSection.getBoundingClientRect().top;
+
+  if (sectionTop < window.innerHeight * 0.55) {
+    processCircleStarted = true;
+
+    processCircleItems.forEach((item, index) => {
+      setTimeout(() => {
+        item.classList.add("process-active");
+      }, index * 3000);
+    });
+  }
+}
+
+window.addEventListener("scroll", startProcessCircleGlow);
+window.addEventListener("load", startProcessCircleGlow);
+  </script>
+
+</body>
+</html>
